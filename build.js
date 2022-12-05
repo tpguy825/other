@@ -1,5 +1,5 @@
-import { readdirSync, statSync } from "fs";
-import { exec } from "child_process";
+const { readdirSync, statSync } = require("fs");
+const { exec } = require("child_process");
 
 const ignoreddirs = ["node_modules", ".git"];
 
