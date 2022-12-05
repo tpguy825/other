@@ -53,7 +53,7 @@ export default function Binary() {
 							setresult(result);
 							setcalc(calc);
 						}}
-						disabled={!isvaliddenary(Number(denary))}>
+						disabled={!isvaliddenary(Number(denary)) || denary === ""}>
 						Denary {`=>`} Binary
 					</button>
 					<button
