@@ -3,9 +3,6 @@ const { exec } = require("child_process");
 
 const ignoreddirs = ["node_modules", ".git"];
 
-/** this is a boolean btw */
-let next;
-
 // iterate over directories in the current directory
 readdirSync(__dirname).forEach((dir, i, dirs) => {
 	// ignore files
@@ -15,15 +12,13 @@ readdirSync(__dirname).forEach((dir, i, dirs) => {
 	}
 
 	// ignore certain dirs
-	ignoreddirs.forEach((ignoredir) => {
+	for (let ignoreindex = 0; ignoreindex < ignoredirs.length; ignoreindex++) {
+		const ignoredir = ignoredirs[ignoreindex];
+		
 		if (dir === ignoredir) {
 			console.log(`Skipping ${dir} because it is ignored (${i + 1}/${dirs.length})`);
 			next = true;
 		}
-	})
-	if(next) {
-		next = false;
-		return;
 	}
 
 	// if the dir has a package.json, build it
