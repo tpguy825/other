@@ -31,7 +31,7 @@ export default function Binary() {
 						Denary{" "}
 						{isvaliddenary(Number(denary)) ? null : <span className="error">- Invalid denary number (needs to be between 0-255)</span>}
 					</label>
-					<input type="text" className="form-control" id="num1" value={denary} onChange={(e) => setdenary(e.target.value)} />
+					<input type="number" className="form-control" id="num1" value={denary} onChange={(e) => setdenary(e.target.value)} />
 				</div>
 				<div className="form-group">
 					<label htmlFor="num2">
