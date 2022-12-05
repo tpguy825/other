@@ -103,9 +103,9 @@ function binarytodenary(binary: string): [number, string] {
 			if (digit === "1") {
 				denary += 1 * binarytable[String(i + 1) as BinaryStringCount];
 				if (calc !== "") {
-					calc += ` + ${digit}`;
+					calc += ` + ${denary}`;
 				} else {
-					calc += `${digit}`;
+					calc += `${denary}`;
 				}
 			} else if (digit !== "0") {
 				alert("Invalid binary number: " + digit);
