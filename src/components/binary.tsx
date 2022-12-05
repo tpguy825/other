@@ -92,6 +92,10 @@ window.onerror = (message, source, lineno, colno) => {
 	alert(`Error: ${message} at ${source}:${lineno}:${colno}`);
 };
 
+function copyToClipboard(value: string) {
+        return navigator.clipboard.writeText(value);
+}
+
 function isvalidbinary(binary: string) {
 	return binary.length === 8 && !/[^01]/.test(binary);
 }
