@@ -68,15 +68,19 @@ export default function Binary() {
 						Binary {`=>`} Denary
 					</button>
 				</div>
-				<div className="input-group mb-3">
+                                <div className="form-group">
 					<p id="result-label">Result</p>
+                                </div>
+				<div className="input-group mb-3">
 					<input disabled type="text" id="result" className="form-control" value={result} aria-describedby="result-label" />
-					<span className="input-group-text" onClick={() => copyToClipboard(calc)}id="result-addon">
+					<span className="input-group-text" onClick={() => copyToClipboard(result)}id="result-addon">
 						Copy
 					</span>
 				</div>
-				<div className="input-group mb-3">
+                                <div className="form-group">
 					<p id="calc-label">Calculation</p>
+                                </div>
+				<div className="input-group mb-3">
 					<input disabled type="text" className="form-control" value={calc} id="calc" aria-describedby="calc-label" />
 					<span className="input-group-text" onClick={() => copyToClipboard(calc)} id="calc-addon">
 						Copy
