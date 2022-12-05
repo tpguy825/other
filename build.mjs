@@ -25,7 +25,8 @@ readdirSync(__dirname).forEach((dir, i, dirs) => {
 			if (err) {
 				console.err(err);
 				return;
-			} else if(stderr) {
+			}
+			if(stderr) {
 				console.err(stderr);
 				return;
 			}
