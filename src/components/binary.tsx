@@ -17,8 +17,8 @@ type KeyArray<K extends string | number | symbol, I> = {
 };
 
 export default function Binary() {
-	const [denary, setdenary] = useState("0");
-	const [binary, setbinary] = useState("00000000");
+	const [denary, setdenary] = useState("");
+	const [binary, setbinary] = useState("");
 	const [calc, setcalc] = useState("");
 	const [result, setresult] = useState("");
 
@@ -36,7 +36,7 @@ export default function Binary() {
 				<div className="form-group">
 					<label htmlFor="num2">
 						Binary{" "}
-						{binary.length !== 8 ? (
+						{binary.length !== 8 && binary !== "" ? (
 							<span className="error">- Binary number needs to be 8 digits long (not {binary.length})</span>
 						) : isvalidbinary(binary) ? null : (
 							<span className="error">- Invalid binary</span>
