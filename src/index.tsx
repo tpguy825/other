@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import "bootstrap";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Binary from "./components/binary";
 import Index from "./components/index";
+import Binary from "./components/binary";
+import Footer from "./components/footer/Footer";
 
 import "./assets/index.scss";
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
 		<RouterProvider router={router} />
+		<Footer />
 	</React.StrictMode>,
 );
 
