@@ -16,7 +16,7 @@ type KeyArray<K extends string | number | symbol, I> = {
 	[P in K]: I;
 };
 
-export default function App() {
+export default function Binary() {
 	const [denary, setdenary] = useState("0");
 	const [binary, setbinary] = useState("00000000");
 	const [calc, setcalc] = useState("");
@@ -97,16 +97,17 @@ function binarytodenary(binary: string): [number, string] {
 		alert("Binary number must be 8 digits long");
 	} else {
 		// convert binary to denary
-		for (let i = 8; i > binaryarray.length - 8; ) {
+		for (let i = 8; i > binaryarray.length - 8;) {
 			i--;
 			const digit = binaryarray[i];
 			if (digit === "1") {
-				denary += 1 * binarytable[String(i + 1) as BinaryStringCount];
+				let value = binarytable[String(i + 1) as BinaryStringCount];
 				if (calc !== "") {
-					calc += ` + ${denary}`;
+					calc += ` + ${value}`;
 				} else {
-					calc += `${denary}`;
+					calc += `${value}`;
 				}
+				denary += value;
 			} else if (digit !== "0") {
 				alert("Invalid binary number: " + digit);
 			}
