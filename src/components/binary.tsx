@@ -68,13 +68,20 @@ export default function Binary() {
 						Binary {`=>`} Denary
 					</button>
 				</div>
-				<div className="form-group">
+				<div className="input-group mb-3">
 					<label htmlFor="result">Result</label>
-					<input type="text" className="form-control" id="result" value={result} disabled />
+					<input type="text" id="result" className="form-control" value={result} />
+					{/* TODO: add `copyToClipboard` */}
+					<span className="input-group-text" onClick={copyToClipboard(calc)}id="result-addon">
+						Copy
+					</span>
 				</div>
-				<div className="form-group">
+				<div className="input-group mb-3">
 					<label htmlFor="calc">Calculation</label>
-					<input type="text" className="form-control" id="calc" value={calc} disabled />
+					<input type="text" className="form-control" value={calc} id="calc" />
+					<span className="input-group-text" onClick={copyToClipboard(calc)} id="calc-addon">
+						Copy
+					</span>
 				</div>
 			</form>
 		</div>
@@ -97,7 +104,7 @@ function binarytodenary(binary: string): [number, string] {
 		alert("Binary number must be 8 digits long");
 	} else {
 		// convert binary to denary
-		for (let i = 8; i > binaryarray.length - 8;) {
+		for (let i = 8; i > binaryarray.length - 8; ) {
 			i--;
 			const digit = binaryarray[i];
 			if (digit === "1") {

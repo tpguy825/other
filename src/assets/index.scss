@@ -15,3 +15,108 @@ button {
 .form-group {
 	margin: 10px 10px 10px 0;
 }
+
+footer {
+	border-top: 1px solid $gray-700;
+	margin-top: 1.5rem;
+	border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-gray-600);
+}
+
+// Footer icon anmations
+.footer-icon { 
+	animation: footer-icon;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	color: var(--bs-gray-600);
+}
+
+.footer-icon:hover {
+	color: var(--bs-gray-600);
+	animation: footer-icon-hover;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+  
+@keyframes footer-icon-hover {
+	from {
+		color: var(--bs-gray-600);
+	}
+	to {
+		color: #084298;
+	}
+}
+
+@keyframes footer-icon {
+	from {
+		color: #084298;
+	}
+	to {
+		color: var(--bs-gray-600);
+	}
+}
+
+// Youtube icon anmations
+.youtube-icon { 
+	animation: youtube-icon;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	color: var(--bs-gray-600);
+}
+
+.youtube-icon:hover {
+	color: var(--bs-gray-600);
+	animation: youtube-icon-hover;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+  
+@keyframes youtube-icon-hover {
+	from {
+		color: var(--bs-gray-600);
+	}
+	to {
+		color: #dc3545;
+	}
+}
+
+@keyframes youtube-icon {
+	from {
+		color: #dc3545;
+	}
+	to {
+		color: var(--bs-gray-600);
+	}
+}
+
+// github icon anmations
+.github-icon { 
+	animation: github-icon;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	color: var(--bs-gray-600);
+}
+
+.github-icon:hover {
+	color: var(--bs-gray-600);
+	animation: github-icon-hover;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+  
+@keyframes github-icon-hover {
+	from {
+		color: var(--bs-gray-600);
+	}
+	to {
+		color: #000;
+	}
+}
+
+@keyframes github-icon {
+	from {
+		color: #000;
+	}
+	to {
+		color: var(--bs-gray-600);
+	}
+}
