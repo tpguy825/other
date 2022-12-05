@@ -69,16 +69,15 @@ export default function Binary() {
 					</button>
 				</div>
 				<div className="input-group mb-3">
-					<label htmlFor="result">Result</label>
-					<input type="text" id="result" className="form-control" value={result} />
-					{/* TODO: add `copyToClipboard` */}
+					<p id="result-label">Result</p>
+					<input disabled type="text" id="result" className="form-control" value={result} aria-describedby="result-label" />
 					<span className="input-group-text" onClick={() => copyToClipboard(calc)}id="result-addon">
 						Copy
 					</span>
 				</div>
 				<div className="input-group mb-3">
-					<label htmlFor="calc">Calculation</label>
-					<input type="text" className="form-control" value={calc} id="calc" />
+					<p id="calc-label">Calculation</p>
+					<input disabled type="text" className="form-control" value={calc} id="calc" aria-describedby="calc-label" />
 					<span className="input-group-text" onClick={() => copyToClipboard(calc)} id="calc-addon">
 						Copy
 					</span>
