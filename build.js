@@ -21,8 +21,9 @@ readdirSync(__dirname).forEach((dir, i, dirs) => {
 		}
 	}
 
-	// if the dir has a package.json, build it
-	if (statSync(`${dir}/package.json`).isFile()) {
+	try {
+		const haspackagejson = statSync(`${dir}/package.json`).isFile()
+		if (!haspackagejson) throw new Error("No package.json found");
 		console.log(`Building ${dir} (${i + 1}/${dirs.length})`);
 		// run a console command
 		exec(`cd ${dir} && npm run build`, (err, stdout, stderr) => {
@@ -36,5 +37,8 @@ readdirSync(__dirname).forEach((dir, i, dirs) => {
 			}
 			console.log(stdout);
 		});
+	} catch (e) {
+		console.log(`Skipping ${dir} because it does not have a package.json (${i + 1}/${dirs.length})`);
+		return
 	}
 });
