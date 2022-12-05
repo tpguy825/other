@@ -12,8 +12,8 @@ readdirSync(__dirname).forEach((dir, i, dirs) => {
 	}
 
 	// ignore certain dirs
-	for (let ignoreindex = 0; ignoreindex < ignoredirs.length; ignoreindex++) {
-		const ignoredir = ignoredirs[ignoreindex];
+	for (let ignoreindex = 0; ignoreindex < ignoreddirs.length; ignoreindex++) {
+		const ignoredir = ignoreddirs[ignoreindex];
 		
 		if (dir === ignoredir) {
 			console.log(`Skipping ${dir} because it is ignored (${i + 1}/${dirs.length})`);
