@@ -1,0 +1,10 @@
+{
+	"extends": ["development"],
+	"ignoredUrls": [
+		{
+			"domain": "./bootstrap.css",
+			"hints": ["compat-api/css"]
+		}
+	]
+}
+
