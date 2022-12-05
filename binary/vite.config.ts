@@ -8,7 +8,7 @@ export default defineConfig({
 
 	resolve: {
 		alias: {
-			"~bootstrap": path.join(__dirname, "node_modules/bootstrap"),
+			"~bootstrap": path.join(__dirname, "..", "node_modules/bootstrap"),
 		},
 	},
 });
