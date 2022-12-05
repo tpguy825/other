@@ -28,11 +28,11 @@ readdirSync(__dirname).forEach((dir, i, dirs) => {
 		// run a console command
 		exec(`cd ${dir} && npm run build`, (err, stdout, stderr) => {
 			if (err) {
-				console.err(err);
+				console.error(err);
 				return;
 			}
 			if(stderr) {
-				console.err(stderr);
+				console.error(stderr);
 				return;
 			}
 			console.log(stdout);
