@@ -38,7 +38,7 @@ export default function Binary() {
 						Binary{" "}
 						{binary.length !== 8 && binary !== "" ? (
 							<span className="error">- Binary number needs to be 8 digits long (not {binary.length})</span>
-						) : isvalidbinary(binary) ? null : (
+						) : isvalidbinary(binary) || binary === "" ? null : (
 							<span className="error">- Invalid binary</span>
 						)}
 					</label>
