@@ -51,6 +51,7 @@ function deleteSuggestion(key) {
 	gentable(document.getElementById("table"));
 }
 
+gentable(document.getElementById("table"));
 setInterval(() => {
 	gentable(document.getElementById("table"));
 }, 5000)
