@@ -48,7 +48,6 @@ async function gentable(data, table) {
  */
 function deleteSuggestion(key) {
 	set(ref(database, key), null);
-	gentable(document.getElementById("table"));
 }
 
 onValue(ref(database), (snapshot) => {
