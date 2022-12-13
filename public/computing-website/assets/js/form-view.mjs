@@ -25,6 +25,7 @@ async function gentable(table) {
 	const snapshot = await get(ref(database));
 	if (snapshot.exists()) {
 		const data = snapshot.val();
+		table.innerHTML = `<thead><tr><th>ID</th><th>Name</th><th>Suggestion</th><th>Edit</th></tr></thead><tbody></tbody>`
 		for (const key in data) {
 			const row = table.insertRow();
 			row.insertCell().innerText = key;
@@ -50,4 +51,6 @@ function deleteSuggestion(key) {
 	gentable(document.getElementById("table"));
 }
 
-gentable(document.getElementById("table"));
+setInterval(() => {
+	gentable(document.getElementById("table"));
+}, 5000)
