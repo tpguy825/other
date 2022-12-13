@@ -68,18 +68,18 @@ export default function Binary() {
 						Binary {`=>`} Denary
 					</button>
 				</div>
-                                <div className="form-group">
+				<div className="form-group">
 					<p id="result-label">Result</p>
-                                </div>
+				</div>
 				<div className="input-group mb-3">
 					<input disabled type="text" id="result" className="form-control" value={result} aria-describedby="result-label" />
-					<span className="input-group-text" onClick={() => copyToClipboard(result)}id="result-addon">
+					<span className="input-group-text" onClick={() => copyToClipboard(result)} id="result-addon">
 						Copy
 					</span>
 				</div>
-                                <div className="form-group">
+				<div className="form-group">
 					<p id="calc-label">Calculation</p>
-                                </div>
+				</div>
 				<div className="input-group mb-3">
 					<input disabled type="text" className="form-control" value={calc} id="calc" aria-describedby="calc-label" />
 					<span className="input-group-text" onClick={() => copyToClipboard(calc)} id="calc-addon">
@@ -96,7 +96,7 @@ window.onerror = (message, source, lineno, colno) => {
 };
 
 function copyToClipboard(value: string) {
-        return navigator.clipboard.writeText(value);
+	return navigator.clipboard.writeText(value);
 }
 
 function isvalidbinary(binary: string) {
