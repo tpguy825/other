@@ -35,27 +35,13 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 
-dom.suggestion.addEventListener("input", (ev) => suggestioncheckfunc(ev.target));
-/**
- * @param {HTMLInputElement} el name input element
- */
-function suggestioncheckfunc(el, border = true) {
-	try {
-		if (el.value.length <= 0) throw new Error();
-		if (border) el.style.border = "1px solid green";
-		return true;
-	} catch (e) {
-		if (border) el.style.border = "1px solid red";
-		return false;
-	}
-}
-
-dom.name.addEventListener("input", (ev) => namecheckfunc(ev.target));
+dom.suggestion.addEventListener("input", (ev) => checkfunc(ev.target));
+dom.name.addEventListener("input", (ev) => checkfunc(ev.target));
 
 /**
  * @param {HTMLInputElement} el suggestion input element
  */
-function namecheckfunc(el, border = true) {
+function checkfunc(el, border = true) {
 	try {
 		if (el.value.length <= 0) throw new Error();
 		if (border) el.style.border = "1px solid green";
@@ -70,7 +56,7 @@ dom.underformgreen.classList.add("visually-hidden");
 dom.underformred.classList.add("visually-hidden");
 dom.form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	if (!namecheckfunc(dom.name) || !suggestioncheckfunc(dom.suggestion)) return;
+	if (!checkfunc(dom.name) || !checkfunc(dom.suggestion)) return;
 	const suggestion = dom.suggestion.value;
 	const name = dom.name.value;
 	const data = { suggestion, name };
@@ -86,8 +72,8 @@ dom.form.addEventListener("submit", (e) => {
 	}
 });
 
-namecheckfunc(dom.name, false);
-suggestioncheckfunc(dom.suggestion, false);
+checkfunc(dom.name, false);
+checkfunc(dom.suggestion, false);
 
 // firebase schenanigans
 /**
