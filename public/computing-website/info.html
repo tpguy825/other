@@ -1,64 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Computing Unit 14 Website</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/Banner-Heading-Image-images.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="./extras/marks.html">Short-Haired Border Collies</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./info.html">Info</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./images.html">Images</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./extras/form.html"><span style="color: rgba(255, 255, 255, 0.7);">secret button</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="row cards-rows" style="border-top-right-radius: 3px; border-top-left-radius: 3px;">
-            <div class="col"><img src="./assets/img/info/image-colour.png" width="100%"></div>
-            <div class="col-md-7">
-                <p class="cards-text"><span>
-					Like normal border collies, short-haired ones have black-and-white or brown coats, with distinctive markings, which can be recognised from far away. There are also bi-coloured border collies (2 colours) and tri-coloured ones (3 colours), such as the the example here.</span><br></p>
-            </div>
-        </div>
-        <div class="row cards-rows">
-            <div class="col">
-                <p class="cards-text"><span>Collies are famous for ‘the eye’: a nearly unblinking stare. As scary as it is to humans, it is designed for use on livestock, who tend to make eye contact with the dog as it moves in to herd them along. A sheep or cow fixed with the eye will feel threatened and shy away, helping drive the rest of the herd in the desired direction.</span><br></p>
-            </div>
-            <div class="col-md-6"><img src="./assets/img/info/collie-stare.png" width="100%"></div>
-        </div>
-        <div class="row cards-rows">
-            <div class="col-md-6"><img src="./assets/img/info/collie-destroy.png" width="100%"></div>
-            <div class="col-md-6">
-                <p class="cards-text"><span>Collies are a highly energetic breed, with all the strength and motivation needed to move herds of livestock across broad stretches of grazing land. Because of this, they are not often recommended as house pets. Left unsupervised, collies will usually become quite destructive to release their energy, with a high chance of things being shredded (such as pillows and toys)</span><br></p>
-            </div>
-        </div>
-        <div class="row cards-rows" style="border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;">
-            <div class="col-md-6">
-                <p class="cards-text"><span>This extra energy is helped to be calmed by the fact that collies are incredibly intelligent and very receptive to training. They are a working breed, after all, and are eager to work hard. Collies can be taught to herd livestock or chase down pests easily, and lots of intensive training can make them suitable for home protection, medic alert, or helping disabled people.</span><br></p>
-            </div>
-            <div class="col-md-6"><img src="./assets/img/info/collie-splash.png" width="100%"></div>
-        </div>
-        <form id="suggestion-form" class="mb-md-5 mt-md-4 cards-text"><strong>Do you have a suggestion? Put it here!</strong>
-            <div class="input-group"><span id="suggestion-label" class="input-group-text suggestion-text cards-text">Suggestion</span><input aria-describedby="suggestion-label" title="Suggestion" class="form-control" type="text" id="suggestion-input" name="suggestion"></div>
-            <div class="input-group"><span id="name-label" class="input-group-text name-text cards-text">Name</span><input aria-describedby="name-label" class="form-control" title="Name" type="text" id="name-input"><button class="btn btn-primary cards-text" id="submit-button" type="submit">Submit</button></div>
-            <div class="alert alert-success visually-hidden" role="alert" id="under-form-green"><span><strong>Thanks for your suggestion!</strong><br></span></div>
-            <div class="alert alert-success alert-danger visually-hidden" role="alert" id="under-form-red"><span><strong>Alert</strong> text.</span></div>
-        </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/global.js"></script>
-    <script src="./assets/js/info-form.mjs" type="module"></script>
-</body>
-
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<title>Computing Unit 14 Website</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/css/Banner-Heading-Image-images.css" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-light navbar-expand-md">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="./extras/marks.html">Short-Haired Border Collies</a>
+				<button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+					<span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navcol-1">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./info.html">Info</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./images.html">Images</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./extras/form.html">
+								<span style="color: rgba(255, 255, 255, 0.7)">secret button</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row cards-rows" style="border-top-right-radius: 3px; border-top-left-radius: 3px">
+				<div class="col">
+					<img src="./assets/img/info/image-colour.png" width="100%" />
+				</div>
+				<div class="col-md-7">
+					<p class="cards-text">
+						<span>
+							Like normal border collies, short-haired ones have black-and-white or brown coats, with distinctive markings, which can be
+							recognised from far away. There are also bi-coloured border collies (2 colours) and tri-coloured ones (3 colours), such as
+							the the example here.
+						</span>
+						<br />
+					</p>
+				</div>
+			</div>
+			<div class="row cards-rows">
+				<div class="col">
+					<p class="cards-text">
+						<span>
+							Collies are famous for ‘the eye’: a nearly unblinking stare. As scary as it is to humans, it is designed for use on
+							livestock, who tend to make eye contact with the dog as it moves in to herd them along. A sheep or cow fixed with the eye
+							will feel threatened and shy away, helping drive the rest of the herd in the desired direction.
+						</span>
+						<br />
+					</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./assets/img/info/collie-stare.png" width="100%" />
+				</div>
+			</div>
+			<div class="row cards-rows">
+				<div class="col-md-6">
+					<img src="./assets/img/info/collie-destroy.png" width="100%" />
+				</div>
+				<div class="col-md-6">
+					<p class="cards-text">
+						<span>
+							Collies are a highly energetic breed, with all the strength and motivation needed to move herds of livestock across broad
+							stretches of grazing land. Because of this, they are not often recommended as house pets. Left unsupervised, collies will
+							usually become quite destructive to release their energy, with a high chance of things being shredded (such as pillows and
+							toys)
+						</span>
+						<br />
+					</p>
+				</div>
+			</div>
+			<div class="row cards-rows" style="border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">
+				<div class="col-md-6">
+					<p class="cards-text">
+						<span>
+							This extra energy is helped to be calmed by the fact that collies are incredibly intelligent and very receptive to
+							training. They are a working breed, after all, and are eager to work hard. Collies can be taught to herd livestock or
+							chase down pests easily, and lots of intensive training can make them suitable for home protection, medic alert, or
+							helping disabled people.
+						</span>
+						<br />
+					</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./assets/img/info/collie-splash.png" width="100%" />
+				</div>
+			</div>
+			<form id="suggestion-form" class="mb-md-5 mt-md-4 cards-text">
+				<strong>Do you have a suggestion? Put it here!</strong>
+				<div class="input-group">
+					<span id="suggestion-label" class="input-group-text suggestion-text cards-text">Suggestion</span>
+					<input
+						aria-describedby="suggestion-label"
+						title="Suggestion"
+						class="form-control"
+						type="text"
+						id="suggestion-input"
+						name="suggestion" />
+				</div>
+				<div class="input-group">
+					<span id="name-label" class="input-group-text name-text cards-text">Name</span>
+					<input aria-describedby="name-label" class="form-control" title="Name" type="text" id="name-input" />
+					<button class="btn btn-primary cards-text" id="submit-button" type="submit">Submit</button>
+				</div>
+				<div class="alert alert-success visually-hidden" role="alert" id="under-form-green">
+					<span>
+						<strong>Thanks for your suggestion!</strong>
+						<br />
+					</span>
+				</div>
+				<div class="alert alert-success alert-danger visually-hidden" role="alert" id="under-form-red">
+					<span><strong>Alert</strong> text. </span>
+				</div>
+			</form>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/js/global.js"></script>
+		<script src="./assets/js/info-form.mjs" type="module"></script>
+	</body>
 </html>

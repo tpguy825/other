@@ -1,56 +1,55 @@
 .image-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: calc(100vh - 96px);
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+	height: calc(100vh - 96px);
 }
 
 .item {
-  width: 26%;
-  position: sticky;
-  padding: 5px;
+	width: 26%;
+	position: sticky;
+	padding: 5px;
 }
 
 .resize-down {
-  height: 344px;
+	height: 344px;
 }
 
 /* Force new columns */
 
 .break {
-  flex-basis: 100%;
-  background: none;
-  width: 0;
-  margin: 0;
-  content: "";
-  padding: 0;
+	flex-basis: 100%;
+	background: none;
+	width: 0;
+	margin: 0;
+	content: "";
+	padding: 0;
 }
 
 .name-text {
-  width: 140px;
-  border-top-left-radius: 0;
-  border-top: 0.5px solid #ced4da;
+	width: 140px;
+	border-top-left-radius: 0;
+	border-top: 0.5px solid #ced4da;
 }
 
 .suggestion-text {
-  width: 140px;
-  border-bottom-left-radius: 0;
-  border-bottom: 0.5px solid #ced4da;
+	width: 140px;
+	border-bottom-left-radius: 0;
+	border-bottom: 0.5px solid #ced4da;
 }
 
 #submit-button {
-  border-top-right-radius: 0;
+	border-top-right-radius: 0;
 }
 
 #suggestion-input {
-  border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .cards-text {
-  font-size: larger;
+	font-size: larger;
 }
 
 .cards-rows {
-  border: 1px solid #ced4da;
+	border: 1px solid #ced4da;
 }
-
